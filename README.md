@@ -2,7 +2,7 @@
 
 1) Do MAKE in your Push_Swap project dir, then put TEST.SH in the same folder.
 
-2) Run ./test.sh VAL1 VAL2 VAL3 , where your push_swap will be runned VAL3 times with random values from VAL1 to VAL2
+2) Run "./test.sh VAL1 VAL2 VAL3" , where your push_swap will be runned VAL3 times with random values from VAL1 to VAL2
 
 EXAMPLE:
 
