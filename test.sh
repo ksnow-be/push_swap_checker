@@ -75,49 +75,66 @@ fi
 done
 
 let "koef = $sred / $count"
-
+echo "\n💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠\n"
 if [ $dif -eq 100 ]
     then
     if [ $koef -gt 1300 ]
     then
-    echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  0️⃣     ❗️"
+    echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  0️⃣     ❗️"
     elif [ $koef -gt 1300 ]
     then
-    echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  1️⃣     ✅"
+    echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  1️⃣     ✅"
     elif [ $koef -gt 1100 ]
     then
-    echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  2️⃣     ✅  ✅"
+    echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  2️⃣     ✅  ✅"
     elif [ $koef -gt 900 ]
     then
-    echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  3️⃣     ✅  ✅  ✅"
+    echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  3️⃣     ✅  ✅  ✅"
     elif [ $koef -gt 700 ]
     then
-    echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  4️⃣      ✅  ✅  ✅  ✅"
+    echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  4️⃣      ✅  ✅  ✅  ✅"
     elif [ $koef -gt 0 ]
     then
-    echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  5️⃣      ✅  ✅  ✅  ✅  ✅"
+    echo "Middle value: \033[33m$koef\033[m   Grade is :  5️⃣      ✅  ✅  ✅  ✅  ✅"
     fi
 elif [ $dif -eq 500 ]
     then
         if [ $koef -gt 11500 ]
         then
-        echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  0️⃣     ❗️"
+        echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  0️⃣     ❗️"
         elif [ $koef -gt 10000 ]
         then
-        echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  1️⃣     ✅"
+        echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  1️⃣     ✅"
         elif [ $koef -gt 8500 ]
         then
-        echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  2️⃣     ✅  ✅"
+        echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  2️⃣     ✅  ✅"
         elif [ $koef -gt 7000 ]
         then
-        echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  3️⃣     ✅  ✅  ✅"
+        echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  3️⃣     ✅  ✅  ✅"
         elif [ $koef -gt 5500 ]
         then
-        echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  4️⃣      ✅  ✅  ✅  ✅"
+        echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  4️⃣      ✅  ✅  ✅  ✅"
         elif [ $koef -gt 0 ]
         then
-        echo "\n\t\t\t\t\t\t\t\t\t\tMiddle value: \033[33m$koef\033[m   Grade is :  5️⃣      ✅  ✅  ✅  ✅  ✅"
+        echo "\nMiddle value: \033[33m$koef\033[m   Grade is :  5️⃣      ✅  ✅  ✅  ✅  ✅"
         fi
 fi
+
+leak=$(valgrind ./push_swap $ARG 2>&1 | grep "definitely lost" | cut -d ':' -f2 | cut -d ' ' -f2)
+heap=$(valgrind ./push_swap $ARG 2>&1 | grep "heap usage" | cut -d ':' -f2 | cut -d ' ' -f2 | cut -d "," -f1)
+
+if [ $heap -gt 0 ]
+then
+    if [ $leak -gt 0 ]
+    then
+    echo "Leaks: \033[31m$leak\033[m byte(s)"
+    else
+    echo "Leaks: \033[32m0\033[m bytes"
+    fi
+else
+echo "Leaks: \033[31mvalgrind is unable, check your Makefile or SDL/MLX compilers\033[m"
+fi
+echo "\n💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠"
+
 
 
