@@ -10,12 +10,6 @@
 
 4) If you want FULL check of your project, you should include "-full" flag.
 
-    It will contain:\n
-    a) Author file\n
-    b) ./push_swap basic tests\n
-    c) ./checker basics tests\n
-    d) Leaks test\n
-
 # EXAMPLE OF A GOOD PROJECT
 
 ![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/OKAY_PS.png)
