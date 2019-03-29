@@ -10,7 +10,7 @@
 
 4) If you want FULL check of your project, you should include "-full" flag.
 
-# EXAMPLE OF A OKAY PROJECT (-full)
+# EXAMPLE OF AN OKAY PROJECT (-full)
 
 ![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/OKAY_PS.png)
 
