@@ -10,13 +10,22 @@
 
 4) If you want FULL check of your project, you should include "-full" flag.
 
-# EXAMPLE OF A GOOD PROJECT
+# EXAMPLE OF A GOOD PROJECT (-full)
 
 ![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/OKAY_PS.png)
 
-# EXAMPLE OF A BAD PROJECT
+# EXAMPLE OF A BAD PROJECT (-full)
 
 ![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/BAD_PS.png)
 
+5) In other case, just run it without any flag.
 
-![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/SAMPLE.png)
+# EAMPLE WITHOUT FLAG
+
+![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/JUST1-100.png)
+
+6) There is a special trigger to check your (1 .. 5) randoms to check your programm does more than 12 operations.
+
+# EAMPLE ON 5 RANDOMS
+
+![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/JUST5.png)
