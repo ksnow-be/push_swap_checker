@@ -29,3 +29,10 @@
 # EAMPLE ON 5 RANDOMS
 
 ![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/JUST5.png)
+
+7) If you are using SDL or MLX vizualizers, your valgrind test probably will show 0 heap usage.
+    In that case, create an infinite loop in your programm main, than run it as a Daemon, than use LEAKS <PID>.
+  
+# EXAMPLE ON SDL/MLX VIZUALIZERS (LEAK PROBLEM)
+
+![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/SDL_PS.png)
