@@ -1,9 +1,28 @@
 # PUSH_SWAP_CHECKER
 
-1) Do MAKE in your Push_Swap project dir, then put TEST.SH in the same folder.
+1) Do MAKE.
 
-2) Run "./test.sh VAL1 VAL2 VAL3" , where your push_swap will be runned VAL3 times with random values from VAL1 to VAL2
+2) Move "test.sh" script into the same folder.
 
-EXAMPLE:
+3) The usage is:
+
+![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/USAGE.png)
+
+4) If you want FULL check of your project, you should include "-full" flag.
+
+    It will contain:
+    a) Author file
+    b) ./push_swap basic tests
+    c) ./checker basics tests
+    d) Leaks test
+
+# EXAMPLE OF A GOOD PROJECT
+
+![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/OKAY_PS.png)
+
+# EXAMPLE OF A BAD PROJECT
+
+![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/PNGS/BAD_PS.png)
+
 
 ![alt text](https://raw.github.com/ksnow-be/push_swap_checker/master/SAMPLE.png)
