@@ -10,11 +10,11 @@
 
 4) If you want FULL check of your project, you should include "-full" flag.
 
-    It will contain:
-    a) Author file
-    b) ./push_swap basic tests
-    c) ./checker basics tests
-    d) Leaks test
+    It will contain:\n
+    a) Author file\n
+    b) ./push_swap basic tests\n
+    c) ./checker basics tests\n
+    d) Leaks test\n
 
 # EXAMPLE OF A GOOD PROJECT
 
