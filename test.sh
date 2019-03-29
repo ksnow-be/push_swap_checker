@@ -205,7 +205,7 @@ echo "Leaks: \033[31m$leak\033[m byte(s)   ❌   \033[33mUse: valgrind --leak-ch
 	echo "Leaks: \033[32m0\033[m bytes   ✅"
 	fi
 	else
-	echo "Leaks: \033[31mvalgrind is unable, check your Makefile or SDL/MLX compilers\033[m    ⚠️"
+	echo "Leaks: \033[31mvalgrind is unable, check your Makefile or SDL/MLX compilers, or run it as a Daemon.\033[m    ⚠️"
 	fi
 	/bin/rm -rf push_swap.dSYM
 fi
