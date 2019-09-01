@@ -99,18 +99,46 @@ else
 echo "❌  - ./checker (action doesn't exist) (instr: none)"
 fi
 printf "test 7: "
-if [ "$(printf 'ra  ' | ./checker 4 1 2 2>&1 | grep "Error" | wc -l)" -eq 1  ]
+if [ "$(printf 'ra  ' | ./checker 4 1 2 2>&1 | grep "Error" | wc -l)" -eq 1 ]
 then
 echo "✅  - ./checker (action with two space after) (instr: none)"
 else
 echo "❌  - ./checker (action with two space after) (instr: none)"
 fi
 printf "test 8: "
-if [ "$(printf '  ra' | ./checker 4 1 2 2>&1 | grep "Error" | wc -l)" -eq 1  ]
+if [ "$(printf '  ra' | ./checker 4 1 2 2>&1 | grep "Error" | wc -l)" -eq 1 ]
 then
 echo "✅  - ./checker (action with two space before) (instr: none)"
 else
 echo "❌  - ./checker (action with two space before) (instr: none)"
+fi
+printf "test 9: "
+if [ "$(printf '' | ./checker - 2>&1 | grep "Error" | wc -l)" -eq 1 ]
+then
+echo "✅  - ./checker (only minus sign as parameter) (instr: none)"
+else
+echo "❌  - ./checker (only minus sign as parameter) (instr: none)"
+fi
+printf "test 10: "
+if [ "$(printf '' | ./checker + 2>&1 | grep "Error" | wc -l)" -eq 1 ]
+then
+echo "✅  - ./checker (only plus sign as parameter) (instr: none)"
+else
+echo "❌  - ./checker (only plus sign as parameter) (instr: none)"
+fi
+printf "test 11: "
+if [ "$(printf '' | ./checker -0 0 2>&1 | grep "Error" | wc -l)" -eq 1 ]
+then
+echo "✅  - ./checker (duplicate zeros) (instr: none)"
+else
+echo "❌  - ./checker (duplicate zeros) (instr: none)"
+fi
+printf "test 12: "
+if [ "$(printf '' | ./checker 18446744073709551616 2>&1 | grep "Error" | wc -l)" -eq 1 ]
+then
+echo "✅  - ./checker (int64_t double overloaded (to zero)) (instr: none)"
+else
+echo "❌  - ./checker (int64_t double overloaded (to zero)) (instr: none)"
 fi
 
 echo "\nFalse tests:"
@@ -133,9 +161,9 @@ echo "\nRight tests:"
 printf "test 1: "
 if [ "$(printf '' | ./checker 0 1 2 | grep "OK" | wc -l)" -eq 1 ]
 then
-echo "✅  - ./checker 0 1 2 (instr: sa pb rrr)"
+echo "✅  - ./checker 0 1 2 (instr: none)"
 else
-echo "❌  - ./checker 0 1 2 (instr: sa pb rrr)"
+echo "❌  - ./checker 0 1 2 (instr: none)"
 fi
 printf "test 2: "
 if [ "$(printf "pb\nra\npb\nra\nsa\nra\npa\npa\n" | ./checker 0 9 1 8 2 | grep "OK" | wc -l)" -eq 1 ]
@@ -331,6 +359,3 @@ elif [ $dif -eq 500 ]
 fi
 
 echo "\n💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠 💠"
-
-
-
