@@ -1,5 +1,15 @@
 # PUSH_SWAP_CHECKER
 
+## Made by 
+
+| Person | Сircumstances |
+| ------:| -----------:|
+| [Alex](https://github.com/ksnow-be) | Bored student of 21 |
+| [Levon](https://github.com/levonka)   | His lovely friend who found this idea non-stupid |
+
+
+## Step by step
+
 1) Do MAKE.
 
 2) Move "test.sh" script into the same folder.
