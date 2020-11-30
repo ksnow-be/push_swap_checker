@@ -2,10 +2,10 @@
 
 ## Made by 
 
-| Person | Сircumstances |
-| ------:| -----------:|
-| [Alex](https://github.com/ksnow-be) | Bored student of 21 |
-| [Levon](https://github.com/levonka)   | His lovely friend who found this idea non-stupid |
+| Person | Сircumstances | Intra/Slack |
+| ------:| -----------:| ------:|
+| [Alex](https://github.com/ksnow-be) | Bored student of 21 | [ksnow-be](https://profile.intra.42.fr/users/ksnow-be)|
+| [Levon](https://github.com/levonka)   | His lovely friend who found this idea non-stupid | [agottlie](https://profile.intra.42.fr/users/agottlie)|
 
 
 ## Step by step
