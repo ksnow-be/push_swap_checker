@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ```
 Родные мои, чекер писался на коленке в 2019 году.
 Если он потерял актуальность или у вас есть желание влить пару изменений - слак ksnow-be
