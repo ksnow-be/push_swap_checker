@@ -1,4 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ```
 Родные мои, чекер писался на коленке в 2019 году.
