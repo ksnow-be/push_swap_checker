@@ -2,6 +2,17 @@ quiet=0
 check=0
 sred=0
 
+if [ "$#" -lt 3 ] || [ "$#" -gt 4 ]
+then
+	printf "\nusage: test.sh [-full] arg1 arg2 arg3\n"
+	printf "       arg1  - start number (random value from .. ).\n"
+	printf "       arg2  - finish number ( .. random value to).\n"
+	printf "       arg3  - how many times run a test.\n"
+	printf "       -full - push_swap tests, checker tests, leaks tests, author file test.\n\n"
+
+	exit
+fi
+
 if [ "$1" = "-full" ]
 then
     check=1
